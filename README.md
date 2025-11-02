@@ -30,8 +30,8 @@
 1. **Clone the repository**:
 
 ```bash
-git clone <repo_url>
-cd <repo_name>
+git clone https://github.com/Gitter150/HexDump.git
+cd HexDump
 ```
 
 2. **Compile**:
