@@ -126,7 +126,7 @@ Output:
 
 ## 👤 Author
 
-**Intellecat** – Creator and maintainer.
+**Gitter150** – Creator and maintainer.
 
 ---
 
