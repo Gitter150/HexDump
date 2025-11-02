@@ -3,7 +3,7 @@
 
 # HexDump 🛠️
 
-![C](https://img.shields.io/badge/Language-C-blue) ![License](https://img.shields.io/badge/License-Free-brightgreen) ![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange)
+![C](https://img.shields.io/badge/Language-C-blue) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange)
 
 **HexDump** is a fast, portable, and interactive file hexdump tool written purely in **C**. View files in hexadecimal and ASCII with colorized output, runtime interaction, and flexible formatting.
 
@@ -126,12 +126,13 @@ Output:
 
 ## 👤 Author
 
-**Gitter150** – Creator and maintainer.
+**Intellecat** – Creator and maintainer.
 
 ---
 
 ## 📄 License
 
-Free to use and modify.
+This project is licensed under the MIT License – see the LICENSE
+ file for details.
 
 ---
