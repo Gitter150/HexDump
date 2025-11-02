@@ -3,9 +3,9 @@
 
 # HexDump 🛠️
 
-![C](https://img.shields.io/badge/Language-C-blue) ![License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange)
+![C](https://img.shields.io/badge/Language-C-blue) ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg) ![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange)
 
-**HexDump** is a fast, portable, and interactive file hexdump tool written purely in **C**. View files in hexadecimal and ASCII with colorized output, runtime interaction, and flexible formatting.
+**HexDump** is a fast, portable, and interactive file hexdump tool written purely in **C**. View files in hexadecimal and ASCII with colorized output for non-printable bytes, customizable line width, grouping, offsets, and runtime interactive input. Supports very large files on 32-bit and 64-bit systems, and works across virtually any operating system.
 
 ---
 
@@ -48,14 +48,21 @@ gcc hexdump.c -o hexdump
 export PATH="$PATH:$(pwd)"
 ```
 
-* **Windows (PowerShell)**:
+* **Windows (PowerShell)**
+
+  **Temporary (current session only):**
 
 ```powershell
 $env:PATH += ";$((Get-Location).Path)"
 ```
 
-> After this, you can run `hexdump` from any directory without specifying the path.
-> Note: On Windows, this change lasts only for the current PowerShell session. For a permanent change, update your user or system PATH via Environment Variables.
+**Permanent (user PATH, new sessions):**
+
+```powershell
+[Environment]::SetEnvironmentVariable("PATH", $env:PATH + ";$((Get-Location).Path)", "User")
+```
+
+> After this, you can run `hexdump` from any directory without specifying the path. On Windows, the permanent method ensures new terminals recognize it automatically.
 
 ---
 
@@ -73,7 +80,7 @@ hexdump <file_path> [OPTIONS]
 | ------------- | --------------------------------------------------------------------------------------- | ------- |
 | `-n <number>` | Number of bytes to read. `-1` reads entire file.                                        | `-1`    |
 | `-w <number>` | Bytes per line. `-1` = default (16).                                                    | 16      |
-| `-g <number>` | Group size (bytes without spaces). -1 = default (4) Example: `2` → `FFFF`.                               | 4       |
+| `-g <number>` | Group size (bytes without spaces). Example: `2` → `FFFF`.                               | 4       |
 | `-s <number>` | Offset to start reading. Positive = from start, negative = from end (`-1` = last byte). | 0       |
 | `-S`          | Display file size.                                                                      | Off     |
 
@@ -132,7 +139,7 @@ Output:
 
 ## 📄 License
 
-This project is licensed under the MIT License – see the LICENSE
- file for details.
+This project is licensed under the **MIT License** – see the [LICENSE](./LICENSE) file for details.
+Feel free to use, modify, and distribute this tool under the terms of the MIT License.
 
 ---
